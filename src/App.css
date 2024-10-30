@@ -1,0 +1,27 @@
+img {
+  width: 100%;
+  height: auto;
+}
+
+body {
+  margin: 0;
+  font-family: "S-Core Dream";
+  overflow-x: hidden;
+
+  min-width: 100vw;
+  min-height: 100vh;
+  background: linear-gradient(179deg, #CDAECD 0%, #7876B0 100%);
+
+  @supports (-webkit-touch-callout: none) {
+    min-height: -webkit-fill-available;
+  }
+}
+
+a:link,
+a:visited {
+  text-decoration: none;
+}
+
+p {
+  margin: 0;
+}

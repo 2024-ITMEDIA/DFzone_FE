@@ -1,0 +1,80 @@
+/* S-Core Dream Thin*/
+@font-face {
+  font-family: "S-Core Dream";
+  font-style: normal;
+  font-weight: 100;
+  font-display: swap;
+  src: url(/fonts/SCDream1.otf) format("opentype");
+}
+
+/* S-Core Dream ExtraLight*/
+@font-face {
+  font-family: "S-Core Dream";
+  font-style: normal;
+  font-weight: 200;
+  font-display: swap;
+  src: url(/fonts/SCDream2.otf) format("opentype");
+}
+
+/* S-Core Dream Light*/
+@font-face {
+  font-family: "S-Core Dream";
+  font-style: normal;
+  font-weight: 300;
+  font-display: swap;
+  src: url(/fonts/SCDream3.otf) format("opentype");
+}
+
+/* S-Core Dream Regular*/
+@font-face {
+  font-family: "S-Core Dream";
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url(/fonts/SCDream4.otf) format("opentype");
+}
+
+/* S-Core Dream Medium*/
+@font-face {
+  font-family: "S-Core Dream";
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+  src: url(/fonts/SCDream5.otf) format("opentype");
+}
+
+/* S-Core Dream Bold*/
+@font-face {
+  font-family: "S-Core Dream";
+  font-style: normal;
+  font-weight: 600;
+  font-display: swap;
+  src: url(/fonts/SCDream6.otf) format("opentype");
+}
+
+/* S-Core Dream ExtraBold*/
+@font-face {
+  font-family: "S-Core Dream";
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: url(/fonts/SCDream7.otf) format("opentype");
+}
+
+/* S-Core Dream Heavy*/
+@font-face {
+  font-family: "S-Core Dream";
+  font-style: normal;
+  font-weight: 800;
+  font-display: swap;
+  src: url(/fonts/SCDream8.otf) format("opentype");
+}
+
+/* S-Core Dream Black */
+@font-face {
+  font-family: "S-Core Dream";
+  font-style: normal;
+  font-weight: 900;
+  font-display: swap;
+  src: url(/fonts/SCDream9.otf) format("opentype");
+}
