@@ -38,6 +38,7 @@ const RAW_RUNTIME_STATE =
           ["globals", "npm:15.11.0"],\
           ["react", "npm:18.3.1"],\
           ["react-dom", "virtual:77028044529d1a331d0f11a6061d794f14731c6085ecd08b5220059ade9ab0dd141ae15b5adac326a9873525da3f49db8440e29399cda9e2274aec668eb02f62#npm:18.3.1"],\
+          ["react-lottie-player", "virtual:77028044529d1a331d0f11a6061d794f14731c6085ecd08b5220059ade9ab0dd141ae15b5adac326a9873525da3f49db8440e29399cda9e2274aec668eb02f62#npm:2.1.0"],\
           ["react-router-dom", "virtual:77028044529d1a331d0f11a6061d794f14731c6085ecd08b5220059ade9ab0dd141ae15b5adac326a9873525da3f49db8440e29399cda9e2274aec668eb02f62#npm:6.27.0"],\
           ["styled-components", "virtual:77028044529d1a331d0f11a6061d794f14731c6085ecd08b5220059ade9ab0dd141ae15b5adac326a9873525da3f49db8440e29399cda9e2274aec668eb02f62#npm:6.1.13"],\
           ["vite", "virtual:77028044529d1a331d0f11a6061d794f14731c6085ecd08b5220059ade9ab0dd141ae15b5adac326a9873525da3f49db8440e29399cda9e2274aec668eb02f62#npm:5.4.10"]\
@@ -1380,6 +1381,7 @@ const RAW_RUNTIME_STATE =
           ["globals", "npm:15.11.0"],\
           ["react", "npm:18.3.1"],\
           ["react-dom", "virtual:77028044529d1a331d0f11a6061d794f14731c6085ecd08b5220059ade9ab0dd141ae15b5adac326a9873525da3f49db8440e29399cda9e2274aec668eb02f62#npm:18.3.1"],\
+          ["react-lottie-player", "virtual:77028044529d1a331d0f11a6061d794f14731c6085ecd08b5220059ade9ab0dd141ae15b5adac326a9873525da3f49db8440e29399cda9e2274aec668eb02f62#npm:2.1.0"],\
           ["react-router-dom", "virtual:77028044529d1a331d0f11a6061d794f14731c6085ecd08b5220059ade9ab0dd141ae15b5adac326a9873525da3f49db8440e29399cda9e2274aec668eb02f62#npm:6.27.0"],\
           ["styled-components", "virtual:77028044529d1a331d0f11a6061d794f14731c6085ecd08b5220059ade9ab0dd141ae15b5adac326a9873525da3f49db8440e29399cda9e2274aec668eb02f62#npm:6.1.13"],\
           ["vite", "virtual:77028044529d1a331d0f11a6061d794f14731c6085ecd08b5220059ade9ab0dd141ae15b5adac326a9873525da3f49db8440e29399cda9e2274aec668eb02f62#npm:5.4.10"]\
@@ -2696,6 +2698,15 @@ const RAW_RUNTIME_STATE =
         "linkType": "HARD"\
       }]\
     ]],\
+    ["lottie-web", [\
+      ["npm:5.12.2", {\
+        "packageLocation": "../../AppData/Local/Yarn/Berry/cache/lottie-web-npm-5.12.2-942dc9e22a-10c0.zip/node_modules/lottie-web/",\
+        "packageDependencies": [\
+          ["lottie-web", "npm:5.12.2"]\
+        ],\
+        "linkType": "HARD"\
+      }]\
+    ]],\
     ["lru-cache", [\
       ["npm:10.4.3", {\
         "packageLocation": "../../AppData/Local/Yarn/Berry/cache/lru-cache-npm-10.4.3-30c10b861a-10c0.zip/node_modules/lru-cache/",\
@@ -3227,6 +3238,31 @@ const RAW_RUNTIME_STATE =
         "linkType": "HARD"\
       }]\
     ]],\
+    ["react-lottie-player", [\
+      ["npm:2.1.0", {\
+        "packageLocation": "../../AppData/Local/Yarn/Berry/cache/react-lottie-player-npm-2.1.0-77dc5dddec-10c0.zip/node_modules/react-lottie-player/",\
+        "packageDependencies": [\
+          ["react-lottie-player", "npm:2.1.0"]\
+        ],\
+        "linkType": "SOFT"\
+      }],\
+      ["virtual:77028044529d1a331d0f11a6061d794f14731c6085ecd08b5220059ade9ab0dd141ae15b5adac326a9873525da3f49db8440e29399cda9e2274aec668eb02f62#npm:2.1.0", {\
+        "packageLocation": "./.yarn/__virtual__/react-lottie-player-virtual-89942c1e8d/3/AppData/Local/Yarn/Berry/cache/react-lottie-player-npm-2.1.0-77dc5dddec-10c0.zip/node_modules/react-lottie-player/",\
+        "packageDependencies": [\
+          ["react-lottie-player", "virtual:77028044529d1a331d0f11a6061d794f14731c6085ecd08b5220059ade9ab0dd141ae15b5adac326a9873525da3f49db8440e29399cda9e2274aec668eb02f62#npm:2.1.0"],\
+          ["@types/react", "npm:18.3.12"],\
+          ["fast-deep-equal", "npm:3.1.3"],\
+          ["lottie-web", "npm:5.12.2"],\
+          ["react", "npm:18.3.1"],\
+          ["rfdc", "npm:1.4.1"]\
+        ],\
+        "packagePeers": [\
+          "@types/react",\
+          "react"\
+        ],\
+        "linkType": "HARD"\
+      }]\
+    ]],\
     ["react-router", [\
       ["npm:6.27.0", {\
         "packageLocation": "../../AppData/Local/Yarn/Berry/cache/react-router-npm-6.27.0-1707eacc21-10c0.zip/node_modules/react-router/",\
@@ -3333,6 +3369,15 @@ const RAW_RUNTIME_STATE =
         "packageLocation": "../../AppData/Local/Yarn/Berry/cache/retry-npm-0.12.0-72ac7fb4cc-10c0.zip/node_modules/retry/",\
         "packageDependencies": [\
           ["retry", "npm:0.12.0"]\
+        ],\
+        "linkType": "HARD"\
+      }]\
+    ]],\
+    ["rfdc", [\
+      ["npm:1.4.1", {\
+        "packageLocation": "../../AppData/Local/Yarn/Berry/cache/rfdc-npm-1.4.1-1a1c63d052-10c0.zip/node_modules/rfdc/",\
+        "packageDependencies": [\
+          ["rfdc", "npm:1.4.1"]\
         ],\
         "linkType": "HARD"\
       }]\

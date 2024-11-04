@@ -11,6 +11,7 @@ body {
   min-width: 100vw;
   min-height: 100vh;
   background: linear-gradient(179deg, #CDAECD 0%, #7876B0 100%);
+  background-attachment: fixed;
 
   @supports (-webkit-touch-callout: none) {
     min-height: -webkit-fill-available;
