@@ -11,6 +11,7 @@ import rainbow from "../img/img_rainbow.png";
 import spark1 from "../img/img_spark1.png";
 import spark2 from "../img/img_spark2.png";
 import cloud from "../img/img_cloud.png";
+import exhibition from "../img/text_exhibition.png";
 import Scroll from '../components/Scroll';
 
 function Invite() {
@@ -28,7 +29,7 @@ function Invite() {
                 const speed = parseFloat(el.getAttribute("data-speed")) || 1;
 
                 el.style.transform = `translateY(-${scrollY * speed * 2}px)`;
-                el.style.opacity = Math.max(1 - scrollY / offset, 0);
+                el.style.opacity = Math.max(1 - (scrollY * 8) / offset, 0);
             });
 
             // Title animation
@@ -113,8 +114,10 @@ function Invite() {
                     <I.Spark1 className="animated" data-speed="1.5" src={spark1} alt='spark1' />
                     <I.Spark2 className="animated" data-speed="1.5" src={spark2} alt='spark2' />
                     <I.Cloud className="animated" data-speed="1.5" src={cloud} alt='cloud' />
+                    <I.Exhibition className="animated" data-speed="1.5" src={exhibition} alt='exhibition' />
                     <I.ScrollArea><Scroll /></I.ScrollArea>
                 </I.Animations>
+
             </I.Invite>
         </>
     );

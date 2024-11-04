@@ -144,6 +144,16 @@ export const Cloud = styled.img`
     right: 80px;
 `;
 
+export const Exhibition = styled.img`
+    ${animatedStyle}
+    width: 29px;
+    height: 224px;
+    position: absolute;
+    z-index: 5;
+    top: 600px;
+    right: 10px;
+`;
+
 export const ScrollArea = styled.div`
     width: 100%;
     display: flex;
