@@ -42,15 +42,15 @@ const Time = styled.div`
 function DateBox() {
     return (
         <>
-            <Box>
+            <Box className="fade-on-scroll">
                 <Date>2024.11.27. 수요일</Date>
                 <Time>10:00 - 17:00</Time>
             </Box>
-            <Box>
+            <Box className="fade-on-scroll">
                 <Date>2024.11.28. 목요일</Date>
                 <Time>10:00 - 17:00</Time>
             </Box>
-            <Box>
+            <Box className="fade-on-scroll">
                 <Date>2024.11.29. 금요일</Date>
                 <Time>10:00 - 14:00</Time>
             </Box>

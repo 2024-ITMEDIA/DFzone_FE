@@ -14,7 +14,10 @@ import cloud from "../img/img_cloud.png";
 import exhibition from "../img/text_exhibition.png";
 import Scroll from '../components/Scroll';
 import Title from '../components/Title';
+import DateBox from '../components/DateBox';
+import MapBox from '../components/MapBox';
 import AboutUs from '../components/AboutUs';
+import Slick from '../components/Slick';
 
 function Invite() {
     useEffect(() => {
@@ -39,9 +42,9 @@ function Invite() {
 
                 // cotents 요소 애니메이션 인덱스 및 타이밍 설정 작업 필요
                 if (index < 5) {
-                    fadeStart = 300 + index * 20;
+                    fadeStart = 310 + index * 20;
                     fadeEnd = fadeStart + 5;
-                } else if (index >= 5 && index <13) {
+                } else if (index >= 5 && index <10) {
                     fadeStart = 470 + (index - 5) * 20;
                     fadeEnd = fadeStart + 5;
                 } else {
@@ -171,11 +174,11 @@ function Invite() {
                     <div >
                         <Title className="fade-on-scroll" title="Information"/>
                         <I.SubTitle className="fade-on-scroll">전시 일정</I.SubTitle>
-                        {/* datebox */}
+                        <DateBox />
                     </div>
                     <div>
                         <I.SubTitle className="fade-on-scroll">오시는 길</I.SubTitle>
-                        {/* mapbox */}
+                        <MapBox />
                     </div>
                     <div>
                         <I.SubTitle className="fade-on-scroll">About Us</I.SubTitle>
