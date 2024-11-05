@@ -8,6 +8,9 @@ export const Container = styled.div`
     flex-direction: column;
     align-items: center;
     margin-bottom: 24px;
+    &.fade-on-scroll {
+        transition: opacity 0.3s ease;
+    }
 `;
 
 export const Text = styled.div`
@@ -32,7 +35,7 @@ export const Line = styled.div`
 function Title({ title }) {
     return (
         <>
-            <Container>
+            <Container className="fade-on-scroll">
                 <Text>{title}</Text>
                 <Line/>
             </Container>
