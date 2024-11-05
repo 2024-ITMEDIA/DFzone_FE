@@ -78,7 +78,6 @@ const MapBox = () => {
   return (
     <Container>
       <Address>
-        <Title>오시는 길</Title>
         <Text>서울 도봉구 마들로13길 84</Text>
         <Text>서울창업허브 창동 B1</Text>
         <Map
