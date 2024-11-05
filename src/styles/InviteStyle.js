@@ -2,11 +2,26 @@ import styled from "styled-components";
 import palette from "../lib/colorPalette";
 
 export const Invite = styled.div`
+    width: 100vw;
+    height: calc(100vh + 100000px);
 `;
 
 export const Animations = styled.div`
     width: 100vw;
-    height: 100vh;
+    &.fixed {
+        position: fixed;
+        top: 0;
+        left: 0;
+    }
+`;
+
+export const Back = styled.div`
+    width: 100vw;
+    height: calc(100vh - 632px);
+    background: linear-gradient(179deg, #CDAECD 0%, #7876B0 380%);
+    position: fixed;
+    z-index: 1;
+    top: 0;
 `;
 
 export const Title = styled.div`
@@ -22,8 +37,7 @@ export const Title = styled.div`
     font-style: normal;
     font-weight: 200;
     line-height: 22px;
-    position: -webkit-sticky;
-    position: sticky;
+    position: fixed;
     z-index: 10;
     top: 46px;
     left: 35px;
@@ -33,8 +47,7 @@ export const Title = styled.div`
 export const Logo = styled.img`
     width: 306px;
     height: 176px;
-    position: -webkit-sticky;
-    position: sticky;
+    position: fixed;
     z-index: 10;
     top: 68px;
     left: 30px;
@@ -161,4 +174,39 @@ export const ScrollArea = styled.div`
     align-items: center;
     position: fixed;
     bottom: 10px;
+`;
+
+export const Contents = styled.div`
+    width: calc(100vw - 76px);
+    padding: 0 38px 130px 38px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 75px;
+    margin-top: 100vh;
+`;
+
+export const Detail = styled.div`
+    color: ${palette.white};
+    text-align: center;
+    font-feature-settings: 'liga' off, 'clig' off;
+    font-family: "S-Core Dream";
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 200;
+    line-height: 22px;
+    transition: opacity 0.3s ease;
+`;
+
+export const SubTitle = styled.div`
+    color: ${palette.white};
+    text-align: center;
+    font-feature-settings: 'liga' off, 'clig' off;
+    text-shadow: 0px 0px 3px ${palette.shadow};
+    font-family: "S-Core Dream";
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 200;
+    line-height: 22px;
+    transition: opacity 0.3s ease;
 `;
