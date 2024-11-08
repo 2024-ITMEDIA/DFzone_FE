@@ -39,6 +39,9 @@ const Text = styled.div`
   font-style: normal;
   font-weight: 200;
   line-height: 22px; /* 183.333% */
+  &.fade-on-scroll {
+        transition: opacity 0.3s ease;
+    }
 `;
 
 // const Map = styled.div`
@@ -59,6 +62,9 @@ const Directions = styled.div`
   width: 296px;
   display: flex;
   margin: 0 auto;
+  &.fade-on-scroll {
+        transition: opacity 0.3s ease;
+    }
 `;
 
 const Traffic = styled.div`
@@ -78,9 +84,12 @@ const MapBox = () => {
   return (
     <Container>
       <Address>
-        <Text>서울 도봉구 마들로13길 84</Text>
-        <Text>서울창업허브 창동 B1</Text>
+        <div className="fade-on-scroll">
+          <Text>서울 도봉구 마들로13길 84</Text>
+          <Text>서울창업허브 창동 B1</Text>
+        </div>
         <Map
+          className="fade-on-scroll"
           center={{ lat: 37.6553254, lng: 127.0480123 }}
           style={{
             width: "296px",
@@ -94,7 +103,7 @@ const MapBox = () => {
           <MapMarker position={{ lat: 37.6553254, lng: 127.0480123 }} title="서울창업허브 창동"></MapMarker>
         </Map>
       </Address>
-      <Directions>
+      <Directions className="fade-on-scroll">
         <Traffic>
           지하철 |<br /> 버스 |
         </Traffic>
