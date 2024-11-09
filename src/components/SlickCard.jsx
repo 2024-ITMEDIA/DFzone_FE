@@ -1,55 +1,73 @@
 import React from "react";
 import styled from "styled-components";
 import palette from "../lib/colorPalette";
-import projectimg from "../img/team.png";
 
-const Container = styled.div`
+const Container = styled.div.attrs({
+  isCenter: (props) => props.isCenter || undefined,
+})`
   display: flex;
   flex-direction: column;
   align-items: center;
-  width: 100%; /* 각 카드의 고정 너비 설정 */
+  width: 100%;
   text-align: center;
   justify-content: center;
   transition: transform 0.3s, z-index 0.3s;
-  opacity: ${(props) => (props.isCenter ? 1 : 0.4)}; /* 중앙 슬라이드와 양쪽 슬라이드 투명도 조절 */
-  transform: ${(props) => (props.isCenter ? "scale(1)" : "scale(0.8)")}; /* 중앙 슬라이드 크기 조절 */
-  z-index: ${(props) => (props.isCenter ? 10 : 5)}; /* 중앙 슬라이드 z-index 설정 */
+  opacity: ${(props) => (props.isCenter ? 1 : 1)};
+  transform: ${(props) => (props.isCenter ? "scale(1)" : "scale(0.8)")};
+  z-index: ${(props) => (props.isCenter ? 10 : 5)};
 `;
 
 const Img = styled.img`
   width: 314px;
   height: 157px;
   flex-shrink: 0;
+  @media (hover: hover) and (pointer: fine) {
+    width: 628px;
+    height: 314px;
+  }
 `;
 
-const Text = styled.div`
+const Text = styled.div.attrs({
+  isCenter: (props) => props.isCenter || undefined,
+})`
   color: ${palette.white};
   text-align: center;
   font-feature-settings: "liga" off, "clig" off;
   font-family: "S-Core Dream";
   font-style: normal;
+  display: ${(props) => (props.isCenter ? "block" : "none")}; 
 `;
 
 const Title = styled.div`
   font-size: 15px;
   font-weight: 500;
   margin-top: 16px;
+  @media (hover: hover) and (pointer: fine) {
+    font-size: 20px;
+    margin-top: 60px;
+  }
 `;
 
 const Article = styled.div`
   font-size: 12px;
   font-weight: 200;
   margin-top: 10px;
+  @media (hover: hover) and (pointer: fine) {
+    font-size: 16px;
+    margin-top: 16px;
+  }
 `;
 
-function SlickCard({ isCenter }) {
+function SlickCard({ isCenter, project }) {
   return (
     <Container isCenter={isCenter}>
-      <Img src={projectimg} alt="프로젝트이미지" />
-      <Text>
-        <Title>프로젝트 이름</Title>
-        <Article>팀명</Article>
-        <Article style={{ fontWeight: 100 }}>팀원 | 팀원 | 팀원 | 팀원 | 팀원</Article>
+      <Img src={`${import.meta.env.VITE_API}${project.project_image}`} alt="프로젝트 이미지" />
+      <Text isCenter={isCenter}>
+        <Title>{project.project_name}</Title>
+        <Article>{project.team_name}</Article>
+        <Article style={{ fontWeight: 100 }}>
+          {project.members.join(" | ")}
+        </Article>
       </Text>
     </Container>
   );
