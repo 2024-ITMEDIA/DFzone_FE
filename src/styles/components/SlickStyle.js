@@ -25,9 +25,9 @@ export const SliderContainer = styled.div`
   min-height: 290px;
   margin: 0px auto;
   @media (hover: hover) and (pointer: fine) {
-    width: calc(100vw - 361px); 
+    width: calc(100vw - 920px);
     min-height: 600px;
-    padding-right: 3%;
+    /* padding-right: 3%; */
   }
   overflow: visible;
 

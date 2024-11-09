@@ -16,7 +16,7 @@ export default function CustomSlider() {
   useEffect(() => {
     const mediaQuery = window.matchMedia("(hover: hover) and (pointer: fine)");
     const handleMediaChange = () => {
-      setSlidesToShow(mediaQuery.matches ? 2.3 : 1);
+      setSlidesToShow(mediaQuery.matches ? 1 : 1);
     };
 
     handleMediaChange(); // 초기 설정

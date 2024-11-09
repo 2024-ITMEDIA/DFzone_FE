@@ -15,6 +15,10 @@ const Container = styled.div.attrs({
   opacity: ${(props) => (props.isCenter ? 1 : 1)};
   transform: ${(props) => (props.isCenter ? "scale(1)" : "scale(0.8)")};
   z-index: ${(props) => (props.isCenter ? 10 : 5)};
+  @media (hover: hover) and (pointer: fine) {
+    width: 628px;
+    /* padding: 0 30px; */
+  }
 `;
 
 const Img = styled.img`
