@@ -42,6 +42,10 @@ const Text = styled.div`
   &.fade-on-scroll {
         transition: opacity 0.3s ease;
     }
+  @media (hover: hover) and (pointer: fine) {
+    font-size: 20px;
+    line-height: 32px;
+  }
 `;
 
 // const Map = styled.div`
@@ -65,6 +69,13 @@ const Directions = styled.div`
   &.fade-on-scroll {
         transition: opacity 0.3s ease;
     }
+  @media (hover: hover) and (pointer: fine) {
+    font-size: 20px;
+    line-height: 32px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+  }
 `;
 
 const Traffic = styled.div`
@@ -73,9 +84,12 @@ const Traffic = styled.div`
 
 const Number = styled.div`
   margin-left: 9px;
+  @media (hover: hover) and (pointer: fine) {
+    margin-left: 12px;
+  }
 `;
 
-const MapBox = () => {
+const MapBox = ({type}) => {
   const handleMapClick = () => {
     const kakaoMapUrl = `https://map.kakao.com/?map_type=TYPE_MAP&target=car&rt=,,510590,1154375&rt1=&rt2=%EC%84%9C%EC%9A%B8%EC%B0%BD%EC%97%85%ED%97%88%EB%B8%8C%20%EC%B0%BD%EB%8F%99&rtIds=,1631941533`;
     window.open(kakaoMapUrl, "_blank"); // 새 창에서 길찾기 페이지 열기
@@ -92,9 +106,9 @@ const MapBox = () => {
           className="fade-on-scroll"
           center={{ lat: 37.6553254, lng: 127.0480123 }}
           style={{
-            width: "296px",
-            height: "201px",
-            margin: "15px 0px",
+            width: !type? "296px" : "592px",
+            height: !type? "201px" : "402px",
+            margin: !type? "15px 0px" : "30px 0",
             flexShrink: "0",
           }}
           level={3}

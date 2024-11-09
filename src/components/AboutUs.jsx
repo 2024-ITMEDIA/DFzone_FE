@@ -12,6 +12,9 @@ export const Container = styled.div`
     align-items: center;
     margin-top: 24px;
     box-sizing: border-box;
+    @media (hover: hover) and (pointer: fine) {
+        width: 100%;
+    }
 `;
 
 export const Container2 = styled.div`
@@ -19,9 +22,12 @@ export const Container2 = styled.div`
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin-top: 39px;
+    margin-top: 46px;
     &.fade-on-scroll {
         transition: opacity 0.3s ease;
+    }
+    @media (hover: hover) and (pointer: fine) {
+        margin-top: 100px;
     }
 `;
 
@@ -45,6 +51,10 @@ export const Text = styled.div`
     &.fade-on-scroll {
         transition: opacity 0.3s ease;
     }
+    @media (hover: hover) and (pointer: fine) {
+        font-size: 20px;
+        line-height: 32px;
+    }
 `;
 
 export const Text2 = styled.div`
@@ -58,6 +68,10 @@ export const Text2 = styled.div`
     &.fade-on-scroll {
         transition: opacity 0.3s ease;
     }
+    @media (hover: hover) and (pointer: fine) {
+        font-size: 14px;
+        margin-top: 12px;
+    }
 `;
 
 export const Img = styled.img`
@@ -65,19 +79,27 @@ export const Img = styled.img`
     height: 29px;
     flex-shrink: 0;
     transition: opacity 0.3s ease;
+    @media (hover: hover) and (pointer: fine) {
+        width: 49px;
+        height: 49px;
+    }
 `;
 
-function AboutUs() {
+function AboutUs({type}) {
     return (
         <>
             <Container>
-                <Text className="fade-on-scroll">IT미디어공학전공은 컴퓨터, 스마트폰 및 다양한 사물인터넷</Text>
-                <Text className="fade-on-scroll">기기를 위한 프로그래밍 및 데이터의 처리, 활용 등을 위한</Text>
-                <Text className="fade-on-scroll">첨단 기술 분야를 다룹니다. 또한 영상, 게임 콘텐츠, 사용자</Text>
-                <Text className="fade-on-scroll">인터페이스/사용자 경험 등 창조적인 미디어 기술 분야를</Text>
-                <Text className="fade-on-scroll">다룸으로써, 첨단 IT 및 미디어 기술에 대한 전반적 이해를</Text>
-                <Text className="fade-on-scroll">토대로 다원적 융합형 인재 양성을 통해 새로운 융합 사회로의</Text>
-                <Text className="fade-on-scroll">진보와 인류 사회의 발전에 기여함을 목표로 하고 있습니다.</Text>
+                <Text className="fade-on-scroll">IT미디어공학과는 ‘IT’와 ‘미디어’라는</Text>
+                <Text className="fade-on-scroll" style={{ marginBottom: !type ? "15px" : "40px" }}>용어가 결합된 융합 학문으로,</Text>
+                <Text className="fade-on-scroll">소프트웨어 프로그래밍과 데이터 처리,</Text>
+                <Text className="fade-on-scroll">영상과 게임 콘텐츠 제작, UI/UX 디자인 및</Text>
+                <Text className="fade-on-scroll" style={{ marginBottom: !type ? "15px" : "40px" }}>인터랙션 기술 등을 다룹니다.</Text>
+                <Text className="fade-on-scroll">컴퓨터 시스템의 하드웨어와 소프트웨어 기초 이론부터</Text>
+                <Text className="fade-on-scroll">프로그래밍, 디지털 미디어 활용법까지 교육하여</Text>
+                <Text className="fade-on-scroll" style={{ marginBottom: !type ? "15px" : "40px" }}>학생들이 다원적 융합형 인재로 성장할 수 있도록 합니다.</Text>
+                <Text className="fade-on-scroll">이를 통해 졸업생들은 IT 및 미디어 디자인 분야에서</Text>
+                <Text className="fade-on-scroll">전략적인 진로 기회를 확보하고,</Text>
+                <Text className="fade-on-scroll">창의적 융합 사회에 기여할 수 있습니다.</Text>
                 <Container2 className="fade-on-scroll">
                     <Group href="https://www.duksung.ac.kr/itmedia/main.do">
                         <Img src={Home} alt="Home Icon Image" />
