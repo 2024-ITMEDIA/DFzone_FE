@@ -3,7 +3,7 @@ import palette from "../lib/colorPalette";
 
 export const Invite = styled.div`
     width: 100vw;
-    height: calc(100vh + 100000px);
+    margin-bottom: 130px;
 `;
 
 export const Animations = styled.div`
@@ -42,6 +42,13 @@ export const Title = styled.div`
     top: 46px;
     left: 35px;
     transform-origin: top left;
+    @media (hover: hover) and (pointer: fine) {
+        width: 520px;
+        font-size: 20px;
+        position: absolute;
+        top: 74px;
+        left: 57px;
+    }
 `;
 
 export const Logo = styled.img`
@@ -51,6 +58,13 @@ export const Logo = styled.img`
     z-index: 10;
     top: 68px;
     left: 30px;
+    @media (hover: hover) and (pointer: fine) {
+        width: 673px;
+        height: 387px;
+        position: absolute;
+        top: 96px;
+        left: 57px;
+    }
 `;
 
 export const Date = styled.img`
@@ -61,6 +75,13 @@ export const Date = styled.img`
     top: 253px;
     left: 30px;
     position: fixed;
+    @media (hover: hover) and (pointer: fine) {
+        width: 288px;
+        height: 114px;
+        position: absolute;
+        top: 514px;
+        left: 57px;
+    }
 `;
 
 export const Center = styled.img`
@@ -71,6 +92,13 @@ export const Center = styled.img`
     top: 411px;
     right: 34px;
     position: fixed;
+    @media (hover: hover) and (pointer: fine) {
+        width: 730px;
+        height: 712px;
+        position: absolute;
+        top: 290px;
+        right: 77px;
+    }
 `;
 
 const animatedStyle = `
@@ -85,6 +113,12 @@ export const Flower = styled.img`
     z-index: 5;
     top: 470px;
     left: 10px;
+    @media (hover: hover) and (pointer: fine) {
+        width: 121px;
+        height: 108px;
+        top: 555px;
+        left: 495px;
+    }
 `;
 
 export const Leaves = styled.img`
@@ -95,6 +129,12 @@ export const Leaves = styled.img`
     z-index: 5;
     top: 350px;
     right: 0;
+    @media (hover: hover) and (pointer: fine) {
+        width: 200px;
+        height: 207px;
+        top: 78px;
+        right: 0;
+    }
 `;
 
 export const Light1 = styled.img`
@@ -105,6 +145,12 @@ export const Light1 = styled.img`
     z-index: 5;
     top: 232px;
     right: 43px;
+    @media (hover: hover) and (pointer: fine) {
+        width: 195px;
+        height: 178px;
+        top: 62px;
+        right: 556px;
+    }
 `;
 
 export const Light2 = styled.img`
@@ -115,6 +161,12 @@ export const Light2 = styled.img`
     z-index: 5;
     top: 325px;
     left: 15px;
+    @media (hover: hover) and (pointer: fine) {
+        width: 145px;
+        height: 110px;
+        top: 682px;
+        left: 22px;
+    }
 `;
 
 export const Rainbow = styled.img`
@@ -125,6 +177,12 @@ export const Rainbow = styled.img`
     z-index: 5;
     top: 342px;
     left: 70px;
+    @media (hover: hover) and (pointer: fine) {
+        width: 249px;
+        height: 156px;
+        top: 700px;
+        left: 246px;
+    }
 `;
 
 export const Spark1 = styled.img`
@@ -135,6 +193,12 @@ export const Spark1 = styled.img`
     z-index: 5;
     top: 273px;
     right: 10px;
+    @media (hover: hover) and (pointer: fine) {
+        width: 112px;
+        height: 134px;
+        top: 151px;
+        right: 434px;
+    }
 `;
 
 export const Spark2 = styled.img`
@@ -145,6 +209,12 @@ export const Spark2 = styled.img`
     z-index: 5;
     top: 708px;
     left: 22px;
+    @media (hover: hover) and (pointer: fine) {
+        width: 112px;
+        height: 119px;
+        top: 883px;
+        left: 74px;
+    }
 `;
 
 export const Cloud = styled.img`
@@ -155,6 +225,12 @@ export const Cloud = styled.img`
     z-index: 5;
     top: 323px;
     right: 80px;
+    @media (hover: hover) and (pointer: fine) {
+        width: 229px;
+        height: 119px;
+        top: 862px;
+        left: 460px;
+    }
 `;
 
 export const Exhibition = styled.img`
@@ -165,6 +241,12 @@ export const Exhibition = styled.img`
     z-index: 5;
     top: 600px;
     right: 10px;
+    @media (hover: hover) and (pointer: fine) {
+        width: 64px;
+        height: 492px;
+        top: 530px;
+        right: 26px;
+    }
 `;
 
 export const ScrollArea = styled.div`
@@ -173,17 +255,24 @@ export const ScrollArea = styled.div`
     justify-content: center;
     align-items: center;
     position: fixed;
+    z-index: 20;
     bottom: 10px;
 `;
 
 export const Contents = styled.div`
     width: calc(100vw - 76px);
-    padding: 0 38px 130px 38px;
+    padding: 0 38px 0 38px;
     display: flex;
     flex-direction: column;
     align-items: center;
     gap: 75px;
     margin-top: 100vh;
+    margin-bottom: 75px;
+    @media (hover: hover) and (pointer: fine) {
+        margin-top: 1200px;
+        gap: 150px;
+        margin-bottom: 150px;
+    }
 `;
 
 export const Detail = styled.div`
@@ -196,6 +285,10 @@ export const Detail = styled.div`
     font-weight: 200;
     line-height: 22px;
     transition: opacity 0.3s ease;
+    @media (hover: hover) and (pointer: fine) {
+        font-size: 22px;
+        margin-bottom: 13px;
+    }
 `;
 
 export const SubTitle = styled.div`
@@ -209,4 +302,10 @@ export const SubTitle = styled.div`
     font-weight: 200;
     line-height: 22px;
     transition: opacity 0.3s ease;
+    margin-bottom: 24px;
+    @media (hover: hover) and (pointer: fine) {
+        font-size: 40px;
+        line-height: 50px;
+        margin-bottom: 53px;
+    }
 `;

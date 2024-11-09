@@ -11,6 +11,9 @@ export const Container = styled.div`
     &.fade-on-scroll {
         transition: opacity 0.3s ease;
     }
+    @media (hover: hover) and (pointer: fine) {
+        margin-bottom: 38px;
+    }
 `;
 
 export const Text = styled.div`
@@ -23,12 +26,20 @@ export const Text = styled.div`
     font-weight: 200;
     line-height: 22px;
     margin-bottom: 17px;
+    @media (hover: hover) and (pointer: fine) {
+        font-size: 48px;
+        line-height: 50px;
+        margin-bottom: 24px;
+    }
 `;
 
 export const Line = styled.div`
     width: 40px;
     height: 1px;
     background: ${palette.color3};
+    @media (hover: hover) and (pointer: fine) {
+        width: 80px;
+    }
 `;
 
 

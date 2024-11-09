@@ -4,13 +4,16 @@ import palette from "../lib/colorPalette";
 import dswuLogo from "../img/logo_dswu.png";
 
 export const Container = styled.div`
-  width: 100%;
+  width: 100vw;
   height: 148px;
   flex-shrink: 0;
   background: ${palette.footer};
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  @media (hover: hover) and (pointer: fine) {
+    height: 224px;
+  }
 `;
 
 const Invite = styled.div`
@@ -22,6 +25,10 @@ const Invite = styled.div`
   font-family: "S-Core Dream";
   margin-left: 32px;
   padding-top: 24px;
+  @media (hover: hover) and (pointer: fine) {
+    margin: 45px 60px 0 60px;
+    padding: 0;
+  }
 `;
 
 const Default = styled.div`
@@ -30,6 +37,10 @@ const Default = styled.div`
   font-family: "S-Core Dream";
   margin-left: 32px;
   padding-top: 24px;
+  @media (hover: hover) and (pointer: fine) {
+    margin: 45px 60px 0 60px;
+    padding: 0;
+  }
 `;
 
 const Title = styled.div`
@@ -37,12 +48,18 @@ const Title = styled.div`
   font-style: normal;
   font-weight: 500;
   line-height: 22px; /* 275% */
+  @media (hover: hover) and (pointer: fine) {
+    font-size: 16px;
+  }
 `;
 
 const Article = styled.div`
   font-size: 8px;
   font-style: normal;
   font-weight: 100;
+  @media (hover: hover) and (pointer: fine) {
+    font-size: 14px;
+  }
 `;
 
 const Bottom = styled.div`
@@ -52,6 +69,10 @@ const Bottom = styled.div`
   margin-bottom: 2%;
   justify-content: space-between;
   align-items: center;
+  @media (hover: hover) and (pointer: fine) {
+    margin: 0 60px 40px 60px;
+    align-items: flex-end;
+  }
 `;
 
 const Copyright = styled.div`
@@ -61,12 +82,20 @@ const Copyright = styled.div`
   font-size: 8px;
   font-style: normal;
   font-weight: 100;
+  @media (hover: hover) and (pointer: fine) {
+    font-size: 14px;
+  }
 `;
 
 const Img = styled.img`
   width: 99px;
   height: 26px;
   flex-shrink: 0;
+  @media (hover: hover) and (pointer: fine) {
+    width: 296px;
+    height: 78px;
+    flex-shrink: 0;
+  }
 `;
 
 const Row = styled.div`

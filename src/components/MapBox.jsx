@@ -39,6 +39,13 @@ const Text = styled.div`
   font-style: normal;
   font-weight: 200;
   line-height: 22px; /* 183.333% */
+  &.fade-on-scroll {
+        transition: opacity 0.3s ease;
+    }
+  @media (hover: hover) and (pointer: fine) {
+    font-size: 20px;
+    line-height: 32px;
+  }
 `;
 
 // const Map = styled.div`
@@ -59,6 +66,16 @@ const Directions = styled.div`
   width: 296px;
   display: flex;
   margin: 0 auto;
+  &.fade-on-scroll {
+        transition: opacity 0.3s ease;
+    }
+  @media (hover: hover) and (pointer: fine) {
+    font-size: 20px;
+    line-height: 32px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+  }
 `;
 
 const Traffic = styled.div`
@@ -67,9 +84,12 @@ const Traffic = styled.div`
 
 const Number = styled.div`
   margin-left: 9px;
+  @media (hover: hover) and (pointer: fine) {
+    margin-left: 12px;
+  }
 `;
 
-const MapBox = () => {
+const MapBox = ({type}) => {
   const handleMapClick = () => {
     const kakaoMapUrl = `https://map.kakao.com/?map_type=TYPE_MAP&target=car&rt=,,510590,1154375&rt1=&rt2=%EC%84%9C%EC%9A%B8%EC%B0%BD%EC%97%85%ED%97%88%EB%B8%8C%20%EC%B0%BD%EB%8F%99&rtIds=,1631941533`;
     window.open(kakaoMapUrl, "_blank"); // 새 창에서 길찾기 페이지 열기
@@ -78,14 +98,17 @@ const MapBox = () => {
   return (
     <Container>
       <Address>
-        <Text>서울 도봉구 마들로13길 84</Text>
-        <Text>서울창업허브 창동 B1</Text>
+        <div className="fade-on-scroll">
+          <Text>서울 도봉구 마들로13길 84</Text>
+          <Text>서울창업허브 창동 B1</Text>
+        </div>
         <Map
+          className="fade-on-scroll"
           center={{ lat: 37.6553254, lng: 127.0480123 }}
           style={{
-            width: "296px",
-            height: "201px",
-            margin: "15px 0px",
+            width: !type? "296px" : "592px",
+            height: !type? "201px" : "402px",
+            margin: !type? "15px 0px" : "30px 0",
             flexShrink: "0",
           }}
           level={3}
@@ -94,7 +117,7 @@ const MapBox = () => {
           <MapMarker position={{ lat: 37.6553254, lng: 127.0480123 }} title="서울창업허브 창동"></MapMarker>
         </Map>
       </Address>
-      <Directions>
+      <Directions className="fade-on-scroll">
         <Traffic>
           지하철 |<br /> 버스 |
         </Traffic>
