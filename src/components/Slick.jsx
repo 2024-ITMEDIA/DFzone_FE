@@ -8,7 +8,7 @@ import * as S from "../styles/components/SlickStyle";
 import left from "../img/icon_left.png";
 import right from "../img/icon_right.png";
 
-export default function CustomSlider() {
+export default function CustomSlider({ type }) {
   const [currentSlide, setCurrentSlide] = useState(0);
   const [slidesToShow, setSlidesToShow] = useState(1);
   const [projects, setProjects] = useState([]);
@@ -48,7 +48,7 @@ export default function CustomSlider() {
     slidesToScroll: 1,
     centerMode: true,
     beforeChange: (current, next) => setCurrentSlide(next),
-    centerPadding: "5%",
+    centerPadding: !type ? "5%" : "3%",
     prevArrow: (
       <S.Prev>
         <S.Arrow1 src={left} alt='left'/>
