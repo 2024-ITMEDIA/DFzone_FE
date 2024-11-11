@@ -152,7 +152,7 @@ function Invite() {
     }, []);
     
     return(
-        <>
+        <>  
             <I.Invite>
                 <I.Animations>
                     <I.Title id="title">2024 덕성여자대학교 IT미디어공학전공 제12회 졸업전시회</I.Title>
@@ -226,9 +226,9 @@ function Invite() {
                     </div>
                 </I.Contents>
                 <Title title="Projects"/>
-                <Slick />
+                <Slick type={animation}/>
             </I.Invite>
-            <Footer type="invite" />
+            {animation && (<Footer type="invite"/>)}
         </>
     )
 }

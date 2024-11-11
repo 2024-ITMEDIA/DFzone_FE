@@ -3,7 +3,7 @@ import palette from "../lib/colorPalette";
 
 export const Invite = styled.div`
     width: 100vw;
-    margin-bottom: 130px;
+    margin-bottom: 120px;
 `;
 
 export const Animations = styled.div`
