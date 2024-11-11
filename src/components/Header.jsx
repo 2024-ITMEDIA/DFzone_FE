@@ -19,15 +19,20 @@ function Header() {
         setIsMenuOpen(!isMenuOpen);
     };
 
+    const handleNavigation = (path) => {
+        navigate(path);
+        setIsMenuOpen(false);
+    };
+
     return (
         <H.Header>
             {isMenuOpen && (
                 <H.ToggleMenu>
-                    <H.NavItem>Main</H.NavItem>
-                    <H.NavItem>Information</H.NavItem>
-                    <H.NavItem>Projects</H.NavItem>
-                    <H.NavItem>Map</H.NavItem>
-                    <H.NavItem>Guestbook</H.NavItem>
+                    <H.NavItem onClick={() => handleNavigation('/')}>Main</H.NavItem>
+                    <H.NavItem onClick={() => handleNavigation('/info')}>Information</H.NavItem>
+                    <H.NavItem onClick={() => handleNavigation('/project')}>Projects</H.NavItem>
+                    <H.NavItem onClick={() => handleNavigation('/map')}>Map</H.NavItem>
+                    <H.NavItem onClick={() => handleNavigation('/guestbook')}>Guestbook</H.NavItem>
                 </H.ToggleMenu>
             )}
             {showBack && (
