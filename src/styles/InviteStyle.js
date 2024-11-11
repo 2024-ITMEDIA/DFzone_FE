@@ -25,7 +25,7 @@ export const Back = styled.div`
 `;
 
 export const Title = styled.div`
-    width: 260px;
+    width: 300px;
     height: 22px;
     display: flex;
     align-items: center;
