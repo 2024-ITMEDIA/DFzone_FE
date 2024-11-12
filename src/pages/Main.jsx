@@ -20,7 +20,7 @@ function Main() {
     useEffect(() => {
         const timer = setTimeout(() => {
             setAnimate(true);
-        }, 1500);
+        }, 1000);
 
         return () => clearTimeout(timer);
     }, []);
