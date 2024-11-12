@@ -1,10 +1,15 @@
 import React from "react";
 import * as G from "../styles/GuestStyle";
+import TextField from '../components/TextField';
 
 function Guest() {
     return (
         <>
-            <G.Guest>방명록</G.Guest>
+            <G.GuestContainer>
+                <G.Title>Guestbook</G.Title>
+                <G.Line></G.Line>
+                <TextField />               
+            </G.GuestContainer>
         </>
     );
 }
