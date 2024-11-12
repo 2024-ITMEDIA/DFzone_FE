@@ -3,11 +3,17 @@ import palette from "../lib/colorPalette";
 
 export const Main = styled.div`
     height: 100vh;
+    @media (hover: hover) and (pointer: fine) {
+        height: 100vh;
+    }
 `;
 
 export const Animations = styled.div`
     width: 100vw;
     position: relative;
+    @media (hover: hover) and (pointer: fine) {
+        height: 100vh;
+    }
 `;
 
 const animationStyles = css`
@@ -52,10 +58,10 @@ export const Logo = styled.img`
     left: 30px;
     ${animationStyles}
     @media (hover: hover) and (pointer: fine) {
-        width: 673px;
-        height: 387px;
+        width: 517px;
+        height: 297px;
         position: absolute;
-        top: 96px;
+        top: 101px;
         left: 57px;
     }
 `;
@@ -73,7 +79,7 @@ export const Date = styled.img`
         width: 288px;
         height: 114px;
         position: absolute;
-        top: 514px;
+        top: 416px;
         left: 57px;
     }
 `;
@@ -87,11 +93,11 @@ export const Center = styled.img`
     right: 34px;
     ${animationStyles}
     @media (hover: hover) and (pointer: fine) {
-        width: 730px;
-        height: 712px;
+        width: 628px;
+        height: 614px;
         position: absolute;
-        top: 290px;
-        right: 77px;
+        top: 80px;
+        right: 100px;
     }
 `;
 
@@ -107,8 +113,9 @@ export const Flower = styled.img`
     @media (hover: hover) and (pointer: fine) {
         width: 121px;
         height: 108px;
-        top: 555px;
-        left: 495px;
+        top: unset;
+        bottom: 46px;
+        left: 246px;
     }
 `;
 
@@ -123,7 +130,7 @@ export const Leaves = styled.img`
     @media (hover: hover) and (pointer: fine) {
         width: 200px;
         height: 207px;
-        top: 78px;
+        top: 18px;
         right: 0;
     }
 `;
@@ -140,7 +147,7 @@ export const Light1 = styled.img`
         width: 195px;
         height: 178px;
         top: 62px;
-        right: 556px;
+        right: 647px;
     }
 `;
 
@@ -155,8 +162,8 @@ export const Light2 = styled.img`
     @media (hover: hover) and (pointer: fine) {
         width: 145px;
         height: 110px;
-        top: 682px;
-        left: 22px;
+        top: 580px;
+        left: 27px;
     }
 `;
 
@@ -171,8 +178,8 @@ export const Rainbow = styled.img`
     @media (hover: hover) and (pointer: fine) {
         width: 249px;
         height: 156px;
-        top: 700px;
-        left: 246px;
+        top: 464px;
+        left: 325px;
     }
 `;
 
@@ -187,8 +194,9 @@ export const Spark1 = styled.img`
     @media (hover: hover) and (pointer: fine) {
         width: 112px;
         height: 134px;
-        top: 151px;
-        right: 434px;
+        top: unset;
+        bottom: 235px;
+        right: 144px;
     }
 `;
 
@@ -202,8 +210,9 @@ export const Spark2 = styled.img`
     @media (hover: hover) and (pointer: fine) {
         width: 112px;
         height: 119px;
-        top: 883px;
-        left: 74px;
+        top: unset;
+        bottom: 45px;
+        left: 57px;
     }
 `;
 
@@ -218,8 +227,9 @@ export const Cloud = styled.img`
     @media (hover: hover) and (pointer: fine) {
         width: 229px;
         height: 119px;
-        top: 862px;
-        left: 460px;
+        top: unset;
+        bottom: 45px;
+        right: 127px;
     }
 `;
 
@@ -234,7 +244,8 @@ export const Exhibition = styled.img`
     @media (hover: hover) and (pointer: fine) {
         width: 64px;
         height: 492px;
-        top: 530px;
+        top: unset;
+        bottom: 104px;
         right: 26px;
     }
 `;
@@ -248,4 +259,9 @@ export const ButtonArea = styled.div`
     align-items: center;
     opacity: ${({ animate }) => (animate ? 1 : 0)};
     ${animationStyles}
+    @media (hover: hover) and (pointer: fine) {
+        bottom: 45px;
+        opacity: 1;
+        z-index: 15;
+    }
 `;

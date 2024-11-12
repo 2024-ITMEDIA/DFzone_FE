@@ -21,9 +21,16 @@ export const Button = styled.div`
     box-shadow: 0px 0px 3px 0px #5C2487;
     width: 138.548px;
     height: 57.626px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     &:hover {
         opacity: 0.7;
         cursor: pointer;
+    }
+    @media (hover: hover) and (pointer: fine) {
+        width: 244px;
+        height: 102px;
     }
 `;
 
@@ -40,5 +47,8 @@ export const ButtonTitle = styled.div`
     ${Button}:hover & {
         opacity: 0.7;
         cursor: pointer;
+    }
+    @media (hover: hover) and (pointer: fine) {
+        font-size: 20px;
     }
 `;

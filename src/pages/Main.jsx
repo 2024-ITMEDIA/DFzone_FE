@@ -18,11 +18,23 @@ function Main() {
     const [animate, setAnimate] = useState(false);
 
     useEffect(() => {
-        const timer = setTimeout(() => {
-            setAnimate(true);
-        }, 1000);
+        const mediaQuery = window.matchMedia("(hover: hover) and (pointer: fine)");
 
-        return () => clearTimeout(timer);
+        const handleAnimation = () => {
+            if (!mediaQuery.matches) {
+                const timer = setTimeout(() => {
+                    setAnimate(true);
+                }, 1000);
+                return () => clearTimeout(timer);
+            } else {
+                setAnimate(false);
+            }
+        };
+
+        handleAnimation();
+        mediaQuery.addEventListener("change", handleAnimation);
+
+        return () => mediaQuery.removeEventListener("change", handleAnimation);
     }, []);
 
     return (
