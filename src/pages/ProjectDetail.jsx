@@ -96,7 +96,7 @@ function ProjectList() {
         </Textbox>
         <Textbox>
           <Text>기획의도 |</Text>
-          <Text>{projectData.project_intro}</Text>
+          <Text>{projectData.design_intent}</Text>
         </Textbox>
       </Intro>
       <Team>
