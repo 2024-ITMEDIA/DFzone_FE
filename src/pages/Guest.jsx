@@ -2,7 +2,8 @@ import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 import * as G from "../styles/GuestStyle";
 import TextField from '../components/TextField';
-import TextBox from "../components/TextBox"
+import TextBox from "../components/TextBox";
+import Title from "../components/Title";
 
 function Guest() {
     const [datas, setDatas] = useState([]);
@@ -28,18 +29,19 @@ function Guest() {
     return (
         <>
             <G.GuestContainer>
-                <G.Title>Guestbook</G.Title>
-                <G.Line></G.Line>
+                <Title title="Guestbook"/>
                 <TextField onNewComment={handleNewComment} />
-                {datas.map((data) => (
-                    <TextBox
-                        key={data.id}
-                        data={{
-                            author: data.name, 
-                            message: data.content 
-                        }}
-                    />
-                ))}      
+                <G.Div>
+                    {datas.map((data) => (
+                        <TextBox
+                            key={data.id}
+                            data={{
+                                author: data.name, 
+                                message: data.content 
+                            }}
+                        />
+                    ))}     
+                </G.Div> 
             </G.GuestContainer>
         </>
     );

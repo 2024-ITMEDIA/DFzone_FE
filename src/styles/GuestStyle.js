@@ -3,6 +3,16 @@ import palette from "../lib/colorPalette";
 
 export const Guest = styled.div``;
 
+export const Div = styled.div`
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-bottom: 20px;
+    @media (hover: hover) and (pointer: fine) {
+        margin-bottom: 100px;
+    }
+`;
+
 export const GuestContainer = styled.div`
     display: flex;
     flex-direction: column;

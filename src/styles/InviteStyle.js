@@ -286,7 +286,7 @@ export const Detail = styled.div`
     line-height: 22px;
     transition: opacity 0.3s ease;
     @media (hover: hover) and (pointer: fine) {
-        font-size: 22px;
+        font-size: 20px;
         margin-bottom: 13px;
     }
 `;

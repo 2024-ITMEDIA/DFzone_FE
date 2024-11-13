@@ -63,12 +63,14 @@ const TextField = ({onNewComment}) => {
         onChange={handleMessageChange} // 메시지 입력 이벤트 연결
         placeholder="방명록을 남겨주세요. (150자 이내)"
         />
-        <H.SendButton 
-        onClick={handleSendMessage} 
-        disabled={!author || !message} // 작성자와 메시지가 모두 입력되어야 활성화
-        >
-        메세지 전송
-        </H.SendButton>
+        <div style={{display: 'flex', justifyContent: 'flex-end'}}>
+          <H.SendButton 
+          onClick={handleSendMessage} 
+          disabled={!author || !message} // 작성자와 메시지가 모두 입력되어야 활성화
+          >
+          메세지 전송
+          </H.SendButton>
+        </div>
     </H.Container>
     );
 };
