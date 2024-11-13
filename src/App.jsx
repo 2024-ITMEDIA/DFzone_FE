@@ -16,7 +16,7 @@ import Header from './components/Header';
 function App() {
   return (
     <div className="App">
-      {location.pathname !== "/invite" || "/" && <Header/>}
+      {location.pathname !== ("/invite" || "/") && <Header/>}
       <Routes>
         <Route exact path="/" element={<Main />} />
         <Route exact path="/invite" element={<Invite />} />
