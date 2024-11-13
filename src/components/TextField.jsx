@@ -1,7 +1,8 @@
 import React, { useState } from 'react';
 import * as H from "../styles/components/TextFieldStyle"; // 스타일드 컴포넌트 import
+import axios from 'axios';
 
-const TextField = () => {
+const TextField = ({onNewComment}) => {
   const [author, setAuthor] = useState(''); // 작성자 상태 선언
   const [message, setMessage] = useState(''); // 메시지 상태 선언
 
@@ -19,14 +20,29 @@ const TextField = () => {
     }
     };
 
-    const handleSendMessage = () => {
-    if (!author || !message) {
-      alert("작성자와 메시지를 입력해 주세요."); // 입력 확인
-        return;
-    }
+    const handleSendMessage = async () => {
+      // e.preventDefault()
 
-    console.log("작성자:", author);
-    console.log("메시지:", message);
+      if (!author || !message) {
+        alert("작성자와 메시지를 입력해 주세요."); // 입력 확인
+          return;
+      }
+
+      try {
+        const response = await axios.post(`${import.meta.env.VITE_API}/comment/comments/`,{
+          "name": author,
+          "content": message
+        });
+
+        if (response.status === 201) {
+          console.log("댓글이 성공적으로 등록되었습니다.");
+          onNewComment();
+        }
+      } catch (error) {
+        console.error('서버와의 통신 중 오류 발생:', error);
+      }
+
+    
 
     // 메시지를 전송한 후 상태 초기화
     setAuthor('');
