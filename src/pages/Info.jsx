@@ -20,7 +20,7 @@ function Info() {
     return (
         <I.Info>
             <I.Contents>
-                <div style={{ marginBottom: !animation ? "15px" : "40px" }}>
+                <div style={{ marginBottom: !animation ? "15px" : "40px", display: 'flex', flexDirection: 'column', alignItems: 'center'}}>
                     <Title title="전시 일정"/>
                     <DateBox />
                 </div>

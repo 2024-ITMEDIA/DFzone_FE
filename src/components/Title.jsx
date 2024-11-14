@@ -3,10 +3,11 @@ import styled from "styled-components";
 import palette from "../lib/colorPalette";
 
 export const Container = styled.div`
-    width: 100%;
+    width: calc(100vw - 84px);
     display: flex;
     flex-direction: column;
     align-items: center;
+    margin: 0 auto;
     margin-bottom: 24px;
     &.fade-on-scroll {
         transition: opacity 0.3s ease;

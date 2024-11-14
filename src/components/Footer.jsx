@@ -101,6 +101,9 @@ const Img = styled.img`
 const Row = styled.div`
   display: flex;
   margin-top: 5px;
+  @media (hover: hover) and (pointer: fine) {
+    margin-top: 5px
+  }
 `;
 
 const Role = styled.div``;
@@ -114,6 +117,10 @@ const Text = styled.div`
   font-style: normal;
   font-weight: 100;
   line-height: 18px;
+  @media (hover: hover) and (pointer: fine) {
+    font-size: 14px;
+    line-height: 22px;
+  }
 `;
 
 function Footer({ type }) {

@@ -3,7 +3,7 @@ import styled from "styled-components";
 
 const FloatButton = styled.button`
     position: fixed;
-    bottom: 50px;
+    bottom: 30px;
     right: 25px;
     width: 50px;
     height: 50px;

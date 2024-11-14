@@ -29,6 +29,7 @@ export default function Menu({ startMenu, isMenuOpen, onClick }) {
                 width: 40,
                 height: 40,
                 cursor: 'pointer',
+                zIndex: '15', 
             }}
             onClick={onClick}
         />

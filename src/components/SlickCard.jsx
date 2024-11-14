@@ -1,4 +1,5 @@
 import React from "react";
+import { useNavigate } from "react-router-dom";
 import styled from "styled-components";
 import palette from "../lib/colorPalette";
 
@@ -63,8 +64,12 @@ const Article = styled.div`
 `;
 
 function SlickCard({ isCenter, project }) {
+  const navigate = useNavigate();
+    const navigateDetail = (path) => {
+        navigate(path);
+    };
   return (
-    <Container isCenter={isCenter}>
+    <Container isCenter={isCenter}  onClick={() => navigateDetail(`${project.id}`)}>
       <Img src={`${import.meta.env.VITE_API}${project.project_image}`} alt="프로젝트 이미지" />
       <Text isCenter={isCenter}>
         <Title>{project.project_name}</Title>

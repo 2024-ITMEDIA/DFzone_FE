@@ -14,7 +14,7 @@ export const Back = styled.div`
     width: 12.29px;
     height: 20px;
     cursor: pointer;
-    z-index: 2; 
+    z-index: 15; 
 `;
 
 export const ToggleMenu = styled.div`
@@ -23,7 +23,7 @@ export const ToggleMenu = styled.div`
     right: 0;
     width: calc(100vw - 40px);
     height: 236px;
-    background-color:rgba(255, 255, 255, 0.5);
+    background-color:rgba(255, 255, 255, 0.6);
     padding: 84px 20px 26px 20px;
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
     display: flex;
@@ -31,11 +31,15 @@ export const ToggleMenu = styled.div`
     align-items: center;
     justify-content: space-between;
     gap: 24px;
-    z-index: 0;
+    z-index: 10;
+    @media (hover: hover) and (pointer: fine) {
+        height: 286px;
+        gap: 29px;
+    }
 `;
 
 export const NavItem = styled.div`
-    color: ${palette.white};
+    color: ${palette.color3};
     text-align: center;
     font-feature-settings: 'liga' off, 'clig' off;
     -webkit-text-stroke-width: 1;
@@ -49,5 +53,8 @@ export const NavItem = styled.div`
     &:hover {
         color: ${palette.color1};
         text-shadow: 0px 0px 3px ${palette.color3};
+    }
+    @media (hover: hover) and (pointer: fine) {
+        font-size: 20px;
     }
 `;

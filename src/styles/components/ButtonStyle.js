@@ -31,6 +31,7 @@ export const Button = styled.div`
     @media (hover: hover) and (pointer: fine) {
         width: 244px;
         height: 102px;
+        box-shadow: 0px 0px 7px 0px #5C2487;
     }
 `;
 

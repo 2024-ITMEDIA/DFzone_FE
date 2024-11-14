@@ -2,11 +2,21 @@ import styled from "styled-components";
 import palette from "../lib/colorPalette";
 import fb from "../img/img_float.png";
 
+export const Container = styled.div`
+    width: calc(100vw - 52px);
+    padding: 42px 26px 100px 26px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+`;
+
+export const BoothList = styled.div`
+
+`;
+
 export const MapContainer = styled.div`
     width: 100vw;
-    height: 208px;
-    margin-top: 100px;
-    position: relative;
+    margin-bottom: 80px;
 `;
 
 export const Studio = styled.div`
@@ -28,6 +38,10 @@ export const StudioNumber = styled.div`
     font-style: normal;
     font-weight: 500;
     line-height: 22px; /* 137.5% */
+    @media (hover: hover) and (pointer: fine) {
+        font-size: 22px;
+        line-height: 40px;
+    }
 `;
 
 export const TeamName = styled.div`
@@ -42,6 +56,10 @@ export const TeamName = styled.div`
     font-style: normal;
     font-weight: 500;
     line-height: 22px; /* 157.143% */
+    @media (hover: hover) and (pointer: fine) {
+        font-size: 20px;
+        line-height: 40px;
+    }
 `;
 
 export const TeamMember = styled.div`
@@ -53,6 +71,10 @@ export const TeamMember = styled.div`
     font-style: normal;
     font-weight: 300;
     line-height: 22px; /* 183.333% */
+    @media (hover: hover) and (pointer: fine) {
+        font-size: 18px;
+        line-height: 40px;
+    }
 `;
 
 const Button = styled.button`
