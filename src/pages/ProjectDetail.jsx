@@ -112,11 +112,11 @@ function ProjectList() {
         <Title title={projectData.team.project_name}/>
         <Image src={`${import.meta.env.VITE_API}${projectData.team.project_image}`} alt="Project Image" />
         <Textbox>
-          <Text>작품소개 |</Text>
+          <Text style={{color: '#6A226D'}}>작품소개 |</Text>
           <Text>{projectData.project_intro}</Text>
         </Textbox>
         <Textbox>
-          <Text>기획의도 |</Text>
+          <Text style={{color: '#6A226D'}}>기획의도 |</Text>
           <Text>{projectData.design_intent}</Text>
         </Textbox>
       </Intro>

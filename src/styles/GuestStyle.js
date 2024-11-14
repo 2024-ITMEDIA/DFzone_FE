@@ -16,8 +16,9 @@ export const Div = styled.div`
 export const GuestContainer = styled.div`
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    /* justify-content: center; */
     align-items: center;
+    min-height: 100vh;
 `;
 
 export const Title = styled.div`

@@ -10,6 +10,7 @@ const Container = styled.div`
   align-items: center;
   height: calc(100vh - 270px);
   padding-top: 42px;
+  margin-bottom: 30px;
   @media (hover: hover) and (pointer: fine) {
       height: unset;
     }

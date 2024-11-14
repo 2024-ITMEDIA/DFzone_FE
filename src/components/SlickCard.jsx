@@ -1,5 +1,5 @@
 import React from "react";
-import { useNavigate } from "react-router-dom";
+import { useNavigate, useLocation } from "react-router-dom";
 import styled from "styled-components";
 import palette from "../lib/colorPalette";
 
@@ -40,7 +40,7 @@ const Text = styled.div.attrs({
   font-feature-settings: "liga" off, "clig" off;
   font-family: "S-Core Dream";
   font-style: normal;
-  display: ${(props) => (props.isCenter ? "block" : "none")}; 
+  display: ${(props) => (props.isCenter ? "block" : "none")};
 `;
 
 const Title = styled.div`
@@ -65,12 +65,23 @@ const Article = styled.div`
 
 function SlickCard({ isCenter, project }) {
   const navigate = useNavigate();
-    const navigateDetail = (path) => {
-        navigate(path);
-    };
+  const location = useLocation(); // 현재 경로를 가져옵니다.
+
+  const navigateDetail = (path) => {
+    // 경로가 /project가 아닐 경우에만 이동
+    if (location.pathname !== "/project") {
+      navigate(`/project/${project.id}`);
+    } else {
+      navigate(`${project.id}`);
+    }
+  };
+
   return (
-    <Container isCenter={isCenter}  onClick={() => navigateDetail(`${project.id}`)}>
-      <Img src={`${import.meta.env.VITE_API}${project.project_image}`} alt="프로젝트 이미지" />
+    <Container isCenter={isCenter} onClick={navigateDetail}>
+      <Img
+        src={`${import.meta.env.VITE_API}${project.project_image}`}
+        alt="프로젝트 이미지"
+      />
       <Text isCenter={isCenter}>
         <Title>{project.project_name}</Title>
         <Article>{project.team_name}</Article>

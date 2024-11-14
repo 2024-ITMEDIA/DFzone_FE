@@ -24,7 +24,7 @@ function Main() {
             if (!mediaQuery.matches) {
                 const timer = setTimeout(() => {
                     setAnimate(true);
-                }, 1000);
+                }, 0);
                 return () => clearTimeout(timer);
             } else {
                 setAnimate(false);

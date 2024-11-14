@@ -253,14 +253,15 @@ export const Exhibition = styled.img`
 export const ButtonArea = styled.div`
     width: 100vw;
     position: absolute;
-    bottom: 80px;
+    bottom: 50px;
     display: flex;
     justify-content: center;
     align-items: center;
+    z-index: 20;
     opacity: ${({ animate }) => (animate ? 1 : 0)};
     ${animationStyles}
     @media (hover: hover) and (pointer: fine) {
-        bottom: 45px;
+        bottom: 40px;
         opacity: 1;
         z-index: 15;
     }

@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { Routes, Route, useLocation } from "react-router-dom";
 import "./App.css";
-
 import Main from "./pages/Main";
 import Invite from "./pages/Invite";
 import Info from "./pages/Info";
@@ -17,6 +16,10 @@ function App() {
   const location = useLocation();
   const [showHeader, setShowHeader] = useState(false);
   const [showFooter, setShowFooter] = useState(false);
+
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, [location.pathname]);
 
   useEffect(() => {
     const currentPath = location.pathname;
