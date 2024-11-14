@@ -11,8 +11,10 @@ const FloatButton = styled.button`
     border: none;
     cursor: pointer;
     z-index: 10;
-
-    
+    @media (hover: hover) and (pointer: fine) {
+        width: 70px;
+        height: 70px;
+    }
 `;
 
 export default FloatButton;

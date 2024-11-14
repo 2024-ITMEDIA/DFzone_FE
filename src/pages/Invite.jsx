@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from "react";
+import { useNavigate } from "react-router-dom";
 import * as I from "../styles/InviteStyle";
 import logo from "../img/text_logo.png";
 import date from "../img/text_date.png";
@@ -19,9 +20,14 @@ import MapBox from '../components/MapBox';
 import AboutUs from '../components/AboutUs';
 import Slick from '../components/Slick';
 import Footer from '../components/Footer';
+import Float from "../components/Float";
 
 function Invite() {
     const [animation, setAnimation] = useState(false);
+    const navigate = useNavigate();
+    const handleNavigation = (path) => {
+        navigate(path);
+    };
 
     useEffect(() => {
         const mediaQuery = window.matchMedia('(hover: hover) and (pointer: fine)');
@@ -229,6 +235,7 @@ function Invite() {
                 <Slick type={animation}/>
             </I.Invite>
             {animation && (<Footer type="invite"/>)}
+            <Float onClick={() => handleNavigation('/')} />
         </>
     )
 }
