@@ -8,6 +8,10 @@ export const Header = styled.div`
     display: flex;
     justify-content: space-between;
     align-items: center;
+    @media (hover: hover) and (pointer: fine) {
+        width: calc(100vw - 100px);
+        padding: 30px 50px;
+    }
 `;
 
 export const Back = styled.div`

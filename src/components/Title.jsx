@@ -13,6 +13,7 @@ export const Container = styled.div`
         transition: opacity 0.3s ease;
     }
     @media (hover: hover) and (pointer: fine) {
+        width: unset;
         margin-bottom: 38px;
     }
 `;

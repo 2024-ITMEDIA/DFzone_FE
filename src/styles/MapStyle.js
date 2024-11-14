@@ -16,7 +16,9 @@ export const BoothList = styled.div`
 
 export const MapContainer = styled.div`
     width: 100vw;
-    margin-bottom: 80px;
+    @media (hover: hover) and (pointer: fine) {
+        margin-bottom: 80px;
+    }
 `;
 
 export const Studio = styled.div`
