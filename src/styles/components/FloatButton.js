@@ -10,7 +10,7 @@ const FloatButton = styled.button`
     background: url(${(props) => props.image}) no-repeat center/contain;
     border: none;
     cursor: pointer;
-    z-index: 10;
+    z-index: 25;
     @media (hover: hover) and (pointer: fine) {
         width: 70px;
         height: 70px;

@@ -1,6 +1,25 @@
 import styled from "styled-components";
+import palette from "../..//lib/colorPalette";
 import rightarrow from "../../img/icon_right.png";
 import leftarrow from "../../img/icon_left.png";
+
+export const Text = styled.div`
+  width: 100%;
+  display: flex;
+  justify-content: flex-end;
+  color: ${palette.white};
+  text-align: center;
+  font-feature-settings: "liga" off, "clig" off;
+  font-family: "S-Core Dream";
+  font-size: 10px;
+  font-style: normal;
+  font-weight: 200;
+  line-height: 22px;
+  @media (hover: hover) and (pointer: fine) {
+    font-size: 12px;
+    line-height: 32px;
+  }
+`;
 
 export const NextTo = styled.div`
   height: 20px;

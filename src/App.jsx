@@ -16,6 +16,7 @@ function App() {
   const location = useLocation();
   const [showHeader, setShowHeader] = useState(false);
   const [showFooter, setShowFooter] = useState(false);
+  const [projectId, setProjectId] = useState(null);
 
   useEffect(() => {
     window.scrollTo(0, 0);
@@ -31,13 +32,13 @@ function App() {
 
   return (
     <div className="App">
-      {showHeader && <Header />}
+      {showHeader && <Header projectId={projectId} />}
       <Routes>
         <Route exact path="/" element={<Main />} />
-        <Route exact path="/invite" element={<Invite />} />
+        <Route exact path="/invite" element={<Invite projectId={projectId} />} />
         <Route exact path="/info" element={<Info />} />
-        <Route exact path="/project" element={<ProjectList />} />
-        <Route exact path="/project/:id" element={<ProjectDetail />} />
+        <Route exact path="/project" element={<ProjectList projectId={projectId} />} />
+        <Route exact path="/project/:id" element={<ProjectDetail setProjectId={setProjectId} />} />
         <Route exact path="/map" element={<Map />} />
         <Route exact path="/guestbook" element={<Guest />} />
         <Route exact path="/*" element={<None />} />

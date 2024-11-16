@@ -89,7 +89,7 @@ function AboutUs({type}) {
     return (
         <>
             <Container>
-                <Text className="fade-on-scroll">IT미디어공학과는 ‘IT’와 ‘미디어’라는</Text>
+                <Text className="fade-on-scroll">IT미디어공학은 ‘IT’와 ‘미디어’라는</Text>
                 <Text className="fade-on-scroll" style={{ marginBottom: !type ? "15px" : "40px" }}>용어가 결합된 융합 학문으로,</Text>
                 <Text className="fade-on-scroll">소프트웨어 프로그래밍과 데이터 처리,</Text>
                 <Text className="fade-on-scroll">영상과 게임 콘텐츠 제작, UI/UX 디자인 및</Text>

@@ -1,5 +1,6 @@
 import React from "react";
 import styled from "styled-components";
+import { useLocation } from "react-router-dom";
 import palette from "../lib/colorPalette";
 import Slick from "../components/Slick";
 import Title from "../components/Title";
@@ -39,12 +40,15 @@ export const SlickBox = styled.div`
   margin-bottom: 173px;
 `;
 
-function ProjectList() {
+function ProjectList({ projectId }) {
+  const location = useLocation();
+  const lastViewedId = projectId || 1;
+
   return (
     <Container>
       <Title title='Projects'/>
       <SlickBox>
-        <Slick />
+        <Slick lastViewedId={lastViewedId}/>
       </SlickBox>
     </Container>
   );

@@ -86,7 +86,7 @@ const Text = styled.div`
     }
 `;
 
-function ProjectList() {
+function ProjectList({ setProjectId }) {
   const { id } = useParams();
   const [projectData, setProjectData] = useState(null);
 
@@ -103,6 +103,10 @@ function ProjectList() {
 
     fetchProjectData();
   }, [id]);
+
+  useEffect(() => {
+    setProjectId(id);
+}, [id, setProjectId]);
 
   if (!projectData) return <p>Loading...</p>;
 

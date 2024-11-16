@@ -16,6 +16,7 @@ const Container = styled.div.attrs({
   opacity: ${(props) => (props.isCenter ? 1 : 1)};
   transform: ${(props) => (props.isCenter ? "scale(1)" : "scale(0.8)")};
   z-index: ${(props) => (props.isCenter ? 10 : 5)};
+  cursor: pointer;
   @media (hover: hover) and (pointer: fine) {
     width: 628px;
     /* padding: 0 30px; */
@@ -70,9 +71,9 @@ function SlickCard({ isCenter, project }) {
   const navigateDetail = (path) => {
     // 경로가 /project가 아닐 경우에만 이동
     if (location.pathname !== "/project") {
-      navigate(`/project/${project.id}`);
+      navigate(`/project/${project.id}`, { state: { lastViewedId: project.id } });
     } else {
-      navigate(`${project.id}`);
+      navigate(`${project.id}`, { state: { lastViewedId: project.id } });
     }
   };
 

@@ -43,7 +43,7 @@ function Map() {
                     <M.TeamName>펫연구소</M.TeamName>
                     <M.TeamMember>한서영 | 이아영 | 진희정 | 이수빈</M.TeamMember>
                     <M.TeamName>덕드림</M.TeamName>
-                    <M.TeamMember>김현아 | 전한나 | 박연주 | 김소현</M.TeamMember>
+                    <M.TeamMember>김현아 | 전한나 | 박연주 | 우현지 | 김소현</M.TeamMember>
                     <M.TeamName>감자빵</M.TeamName>
                     <M.TeamMember>김주혜 | 김지은 | 이예진 | 조유진 | 한채희</M.TeamMember>
                 </M.Studio>
@@ -68,28 +68,28 @@ function Map() {
                     <M.StudioNumber>※ Studio 4</M.StudioNumber>
                     <M.TeamName>I’m20</M.TeamName>
                     <M.TeamMember>홍지은 | 손지우 | 이예진 | 김현진</M.TeamMember>
-                    <M.TeamName>엉그리덕새</M.TeamName>
+                    <M.TeamName>앵그리덕새</M.TeamName>
                     <M.TeamMember>최가인 | 이채은 | 심유진</M.TeamMember>
                     <M.TeamName>덕솔</M.TeamName>
-                    <M.TeamMember>서수현 | 권세림 | 이주연 | 한결</M.TeamMember>
+                    <M.TeamMember>서수현 | 권세림 | 이주연 | 한 결</M.TeamMember>
                 </M.Studio>
 
                 <M.Studio ref={studioRefs[5]}>
                     <M.StudioNumber>※ Studio 5</M.StudioNumber>
                     <M.TeamName>몽즈</M.TeamName>
-                    <M.TeamMember>이은결 | 양지예 | 이정빈 | 김성연</M.TeamMember>
+                    <M.TeamMember>김성연 | 양지예 | 이은결 | 이정빈</M.TeamMember>
                 </M.Studio>
 
                 <M.Studio ref={studioRefs[6]}>
                     <M.StudioNumber>※ Studio 6</M.StudioNumber>
                     <M.TeamName>무무</M.TeamName>
-                    <M.TeamMember>이성경 | 나가영 | 김지영 | 조예성</M.TeamMember>
+                    <M.TeamMember>김지영 | 나가영 | 이성경 | 조예성</M.TeamMember>
                 </M.Studio>
 
                 <M.Studio ref={studioRefs[7]}>
                     <M.StudioNumber>※ Studio 7</M.StudioNumber>
                     <M.TeamName>럭키미키</M.TeamName>
-                    <M.TeamMember>김슬기 | 김인영 | 윤보민 | 전예진</M.TeamMember>
+                    <M.TeamMember>김슬기 | 김인영 | 윤보민 | 이경민 | 전예진</M.TeamMember>
                 </M.Studio>
 
                 <M.Studio ref={studioRefs[10]}>

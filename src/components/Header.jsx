@@ -4,7 +4,7 @@ import * as H from "../styles/components/HeaderStyle";
 import back from "../img/icon_back.png";
 import Menu from "./Menu";
 
-function Header() {
+function Header({ projectId }) {
     const location = useLocation();
     const navigate = useNavigate();
     const showBack = /^\/project\/\d+/.test(location.pathname);
@@ -36,7 +36,7 @@ function Header() {
                 </H.ToggleMenu>
             )}
             {showBack && (
-                <H.Back onClick={() => navigate(-1)}>
+                <H.Back onClick={() => navigate(-1, { state: { projectId } })}>
                     <img src={back} alt="뒤로가기" />
                 </H.Back>
             )}

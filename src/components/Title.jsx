@@ -15,6 +15,7 @@ export const Container = styled.div`
     @media (hover: hover) and (pointer: fine) {
         width: unset;
         margin-bottom: 38px;
+        max-width: calc(100vw - 50px);
     }
 `;
 

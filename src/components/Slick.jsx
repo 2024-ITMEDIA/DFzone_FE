@@ -8,10 +8,11 @@ import * as S from "../styles/components/SlickStyle";
 import left from "../img/icon_left.png";
 import right from "../img/icon_right.png";
 
-export default function CustomSlider({ type }) {
+export default function CustomSlider({ type, lastViewedId }) {
   const [currentSlide, setCurrentSlide] = useState(0);
   const [slidesToShow, setSlidesToShow] = useState(1);
   const [projects, setProjects] = useState([]);
+  const [initialSlide, setInitialSlide] = useState(lastViewedId);
 
   useEffect(() => {
     const mediaQuery = window.matchMedia("(hover: hover) and (pointer: fine)");
@@ -38,7 +39,7 @@ export default function CustomSlider({ type }) {
     };
 
     fetchProjects();
-  }, []);
+  }, [lastViewedId]);
 
   const settings = {
     dots: false,
@@ -63,15 +64,19 @@ export default function CustomSlider({ type }) {
 
   return (
     <S.SliderContainer>
-      <Slider {...settings}>
-        {projects.map((project, index) => (
-          <SlickCard
-            key={project.id}
-            isCenter={currentSlide === index}
-            project={project.team}
-          />
-        ))}
-      </Slider>
+      <S.Text>*클릭 시 상세 페이지로 이동됩니다.</S.Text>
+      <Slider {...settings} initialSlide={0}>
+      {[
+        ...projects.slice((initialSlide - 1) % projects.length),
+        ...projects.slice(0, (initialSlide - 1) % projects.length),
+      ].map((project, index) => (
+        <SlickCard
+          key={project.id}
+          isCenter={index === currentSlide}
+          project={project.team}
+        />
+      ))}
+    </Slider>
     </S.SliderContainer>
   );
 }

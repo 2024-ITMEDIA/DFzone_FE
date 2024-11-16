@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import { useNavigate } from "react-router-dom";
+import { useNavigate, useLocation } from "react-router-dom";
 import * as I from "../styles/InviteStyle";
 import logo from "../img/text_logo.png";
 import date from "../img/text_date.png";
@@ -22,8 +22,10 @@ import Slick from '../components/Slick';
 import Footer from '../components/Footer';
 import Float from "../components/Float";
 
-function Invite() {
+function Invite({ projectId }) {
     const [animation, setAnimation] = useState(false);
+    const location = useLocation();
+    const lastViewedId = projectId || 1;
     const navigate = useNavigate();
     const handleNavigation = (path) => {
         navigate(path);
@@ -232,7 +234,7 @@ function Invite() {
                     </div>
                 </I.Contents>
                 <Title title="Projects"/>
-                <Slick type={animation}/>
+                <Slick type={animation} lastViewedId={lastViewedId}/>
             </I.Invite>
             {animation && (<Footer type="invite"/>)}
             <Float onClick={() => handleNavigation('/')} />
